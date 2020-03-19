@@ -15,7 +15,7 @@
               <a href="<%= post.link %>">
                 <div class="item-desc">
                   <% if (post.abstract) { %>
-                    <p><%- post.abstract.substring(0, 75) %></p>
+                    <p><%- post.abstract.replace(/<[^>]*>|/g,"").substring(0, 75) + "…" %></p>
                   <% } %>
                 </div>
               </a>
